@@ -1,0 +1,25 @@
+#Ignore thumbnails created by Windows
+Thumbs.db
+
+#Ignore system generated file by Mac
+.DS_Store
+
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+_ignored/
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production

@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Your Name
+	email = your@email.com
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = code --wait
