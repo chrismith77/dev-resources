@@ -14,7 +14,7 @@ alias o="open ." # Mac - Open the current directory in Finder
 # GrizzlEmail Aliases
 # -------
 alias grizz='npm run dev'
-alias grizzb='npm run build'
+alias grizzbuild='npm run build'
 
 # ----------------------
 # Git Aliases
@@ -76,7 +76,7 @@ function grizzcopy() {
   # Results: brand/main/v1/...GrizzlEmail files...
   # ======
   # Mac
-  mkdir "$1" && cd $_ && rsync -a --exclude .git --exclude dist --exclude /node_modules/ ~/dev/@GrizzlEmail/ $2 && cd $_ && npm install
+  mkdir "$1" && cd $_ && rsync -a --exclude .git --exclude dist --exclude /node_modules/ ~/Dev/UI/@GrizzlEmail/ $2 && cd $_ && npm install
   # Windows
   # mkdir "$1" && cd $_ && cp -r --exclude=".git" --exclude="dist" --exclude="node_modules" "c:\dev\@GrizzlEmail" "$2" && cd $_ && npm install # Windows
 }
