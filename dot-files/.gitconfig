@@ -5,3 +5,5 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = code --wait
+[remote "origin"]
+	prune = true

@@ -8,6 +8,7 @@ shopt -s autocd
 shopt -s histappend
 
 export PATH=$PATH:$HOME/bin
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 export HISTSIZE=5000
 export HISTFILESIZE=10000
@@ -33,7 +34,7 @@ print_before_the_prompt () {
   dir=$PWD
   home=$HOME
   dir=${dir/"$HOME"/"~"}
-  printf "\n $txtred%s: $bldpur%s $txtgrn%s\n$txtrst" "$HOST_NAME" "$dir" "$(vcprompt)"
+  printf "\n $txtred%s: $bldpur%s $txtgrn%s\n$txtrst" "$HOST_NAME" "$dir" "$(vcprompt -f [%b])"
 }
 
 PROMPT_ARROW=" ↳"
@@ -42,4 +43,4 @@ PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 PS1="$EMOJI$PROMPT_ARROW "
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
-eval $(ssh-agent)
+eval "$(ssh-agent)"
